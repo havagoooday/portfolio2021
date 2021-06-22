@@ -1,0 +1,303 @@
+@charset 'utf-8';
+
+.community {
+
+    .sub_visual {
+        background-image: url(../img/pattern-2-2400.jpg);
+    }
+    
+    .inner {
+        @include floatClear();
+
+        .search {
+            float: right;
+            margin-bottom: 50px;
+
+            input {
+                display: block;
+                float: left;
+                height: 30px;
+                margin-left: 15px;
+            }
+
+            input[type='text'] {
+                width: 180px;
+                padding: 10px;
+                border-bottom: 1px solid #ccc;
+                font: 300 13px/30px 'noto sans kr';
+                transition: all 0.5s;
+
+                &:focus {
+                    border-color: orangered;
+                }
+            }
+
+            input[type='submit']{
+                font: 300 14px/30px 'biorhyme';
+
+                &:hover, &:focus {
+                    color: orangered;
+                }
+            }
+        }
+
+        table {
+            width: 100%;
+            margin-bottom: 50px;
+
+            .num {
+                width: 10%;
+            }
+            .title {
+                width: 70%;
+            }
+            .writer {
+                width: 10%;
+            }
+            .date {
+                width: 10%;
+            }
+
+            th {
+                height: 50px;
+                border-top: 1px solid #333;
+                border-bottom: 1px solid #ccc;
+
+                text-align: center;
+                font: 500 14px/1 'noto sans kr';
+            }
+
+            td {
+                border-bottom: 1px solid #ccc;
+                height: 50px;
+
+                text-align: center;
+                font: 400 14px/1 'noto sans kr';
+            }
+
+            tr td:nth-child(2) {
+                text-align: left;
+            }
+
+            tr td:nth-child(2) a:hover {
+                color: orangered;
+            }
+        }
+
+        .pagination {
+            width: 100%;
+            text-align: center;
+            @include floatClear();
+
+            a {
+                font: 300 14px/1 'biorhyme';
+                margin: 0 5px;
+                color: #333;
+
+                &:hover {
+                    font-weight: 600;
+                    color: #ff4500;
+                    text-decoration: overline;
+                }
+            }
+            .numbers {
+                display: inline-block;
+                margin: 0 20px;
+
+                .on {
+                    font-weight: bold;
+                    color: #ff4500;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1179px) {
+    .community {
+        
+        .inner {
+    
+            .search {
+    
+                input {
+                    display: block;
+                    float: left;
+                    height: 30px;
+                    margin-left: 15px;
+                }
+    
+                input[type='text'] {
+                    width: 85%;
+                    padding: 10px;
+                    font: 300 13px/30px 'noto sans kr';
+                    transition: all 0.5s;
+                }
+    
+                input[type='submit']{
+                    display: block;
+                    width: 15%;
+                    font: 300 14px/30px 'biorhyme';
+                }
+            }
+    
+            table {
+    
+                .num {
+                    width: 10%;
+                }
+                .title {
+                    width: 90%;
+                }
+                .writer {
+                    width: 0%;
+                    display: none;
+                }
+                .date {
+                    width: 0%;
+                }
+
+                tr {
+                    td {
+                        padding: 14px 0;
+                        font: 400 13px/1.6 'noto sans kr';
+                    }
+                }
+
+                th {
+
+                    &:nth-child(4) {
+                        display: none;
+                    }
+                }
+    
+                td {
+                    font: 300 50px/1.3 'noto sans kr';
+
+                    &:nth-child(3) {
+                        display: none;
+                    }
+                    &:nth-child(4) {
+                        display: none;
+                    }
+                }
+            }
+    
+            .pagination {
+                width: 100%;
+                text-align: center;
+                @include floatClear();
+    
+                a {
+                    font: 300 14px/1 'biorhyme';
+                    margin: 0 5px;
+                    color: #333;
+    
+                    &:hover {
+                        font-weight: 600;
+                        color: #ff4500;
+                        text-decoration: overline;
+                    }
+                }
+                .numbers {
+                    display: inline-block;
+                    margin: 0 20px;
+    
+                    .on {
+                        font-weight: bold;
+                        color: #ff4500;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 539px) {
+    .community {
+        
+        .inner {
+    
+            .search {
+                width: 100%;
+    
+                input {
+                    height: 30px;
+                    margin-left: 15px;
+                }
+    
+                input[type='text'] {
+                    margin-left: 0;
+                    width: calc(100% - 60px);
+                    padding: 10px;
+                    font: 300 12px/30px 'noto sans kr';
+                    transition: all 0.5s;
+                }
+    
+                input[type='submit']{
+                    font: 300 12px/30px 'biorhyme';
+                }
+            }
+    
+            table {
+    
+                .num {
+                    width: 10%;
+                }
+                .title {
+                    width: 70%;
+                }
+                .writer {
+                    width: 0%;
+                    display: none;
+                }
+                .date {
+                    width: 20%;
+                }
+    
+                th {
+                    height: auto;
+                    padding: 15px 0;
+                    font: 500 13px/1 'noto sans kr';
+                }
+    
+                td {
+                    height: auto;
+                    font: 300 13px/1.3 'noto sans kr';
+                    padding: 10px 0;
+
+                    &:nth-child(3) {
+                        display: none;
+                    }
+                }
+            }
+    
+            .pagination {
+                width: 100%;
+                text-align: center;
+                @include floatClear();
+    
+                a {
+                    font: 300 14px/1 'biorhyme';
+                    margin: 0 5px;
+                    color: #333;
+    
+                    &:hover {
+                        font-weight: 600;
+                        color: #ff4500;
+                        text-decoration: overline;
+                    }
+                }
+                .numbers {
+                    display: inline-block;
+                    margin: 0 20px;
+    
+                    .on {
+                        font-weight: bold;
+                        color: #ff4500;
+                    }
+                }
+            }
+        }
+    }
+}

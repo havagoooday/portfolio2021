@@ -1,0 +1,29 @@
+@charset 'utf-8';
+@import url('https://fonts.googleapis.com/css2?family=BioRhyme+Expanded:wght@200;300&family=BioRhyme:wght@200;300&family=Noto+Serif+KR:wght@200;300;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=BioRhyme&display=swap');
+
+/* reset */
+* { margin: 0; padding: 0; box-sizing: border-box; border-collapse: collapse;}
+ol,ul,li { list-style: none;}
+a { outline: 0; text-decoration: none; color: #000;}
+input { outline: none; border: none; background: none; }
+*::selection { background: orangered; color: white;}
+
+// font-family: 'BioRhyme', serif, 200,300;
+// font-family: 'BioRhyme Expanded', serif, 200,300;
+// font-family: 'Noto Serif KR', serif, 200,300,600;
+// font-family: 'Gothic A1', sans-serif;
+
+@mixin floatClear {
+    &::after {content: ''; display: block; clear: both;}
+}
+
+@import 'sub_layout';
+@import 'about';
+@import 'community';
+@import 'video';
+@import 'gallery';
+@import 'map';
+@import 'faq';
+@import 'main';

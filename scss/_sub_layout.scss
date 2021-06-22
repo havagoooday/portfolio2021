@@ -1,0 +1,631 @@
+@charset 'utf-8';
+
+#header {
+    width: 100%;
+    padding: 30px 0;
+    position: absolute;
+    background-color: #fff;
+    
+    .inner {
+        width: 1180px;
+        margin: 0 auto;
+
+        >h1.logo {
+            margin-bottom: 12px;
+
+            a {
+                font: 300 32px/1 'biorhyme expanded';
+            }
+        }
+
+        >h2 {
+            font: 200 13px/1 'biorhyme';
+            color: #777 ;
+            margin-bottom: 50px;
+            letter-spacing: 0px;
+        }
+
+        #btnGnb {
+            display: none;
+        }
+
+        #gnb {
+            width: 100%;
+            position: relative;
+
+            ul.personalMenu {
+                position: absolute;
+                top: -120px; right: 0px;
+
+                li {
+                    float: left;
+                    margin-left: 20px;
+                    text-align: right;
+
+                    a {
+                        font: 300 12px/1 'biorhyme';
+                        color: #111;
+
+                        &:hover, &:focus {
+                            color: orangered;
+                        }
+                    }
+                }
+            }
+
+            .wrap {
+                width: 100%; height: auto;
+                position: relative;
+
+                ul.menu { // 1depth
+                    @include floatClear();
+
+                    >li {
+                        float: left;
+                        margin-right: 50px;
+
+                        &:last-child {
+                            margin-right: 0;
+                        }
+
+                        >a {
+                            font: 200 22px/1 'biorhyme';
+                            letter-spacing: 0.5px;
+
+                            &:hover, &.on, &:focus {
+                                color: orangered;
+                                text-decoration:overline;
+                                text-decoration-thickness: 1px;
+                            }
+                        }
+
+                        >ul.menu2dep { // 2depth
+                            margin-top: 10px;
+                            display: none;
+
+                            >li {
+                                margin-bottom: 5px;
+
+                                >a {
+                                    font: 300 14px/1 'biorhyme';
+                                    color: #777;
+
+                                    &:hover, &:focus {
+                                        color: orangered;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.content {
+    padding-top: 191px;
+
+    .sub_visual {
+        width: 100%;
+        height: 450px;
+        background: #222;
+        background-repeat: repeat;
+        background-size: auto 700px;
+        background-position: center;
+    }
+
+    .inner {
+        width: 1180px;
+        margin: 180px auto;
+
+        h1 {
+            font: 300 36px/1 'biorhyme expanded';
+            margin-bottom: 100px;
+        }
+    }
+}
+
+#footer {
+    width: 100%;
+    background-color: #222;
+    padding: 50px 0 100px;
+    
+    .upper {
+        width: 1180px;
+        margin: 0 auto;
+
+        .wrap {
+            @include floatClear();
+
+            h1.logo {
+                float: left;
+    
+                a {
+                    font: 200 24px/1 'biorhyme expanded';
+                    color: #eee;
+                }
+            }
+    
+            .wrap {
+                width: 50%;
+                float: right;
+    
+                .address {
+                    width: calc(100% / 3);
+                    float: left;
+                    margin-top: 20px;
+
+                    &:nth-child(1) {
+                        width: 45%;
+                    }
+                    &:nth-child(2) {
+                        width: 35%;
+                    }
+                    &:nth-child(3) {
+                        width: 20%;
+                    }
+    
+                    h2 {
+                        font: 300 16px/1 'biorhyme';
+                        margin-bottom: 10px;
+                        color: #eee;
+                    }
+                    p, a {
+                        display: block;
+                        font: 300 13px/1.7 'gothic a1';
+                        color: #ccc;
+                    }
+                }
+            }
+        }
+
+        &::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 1px;
+            background-color: #aaa;
+            margin: 50px 0;
+        }
+    }
+
+    .lower {
+        width: 1180px;
+        margin: 0 auto;
+
+        .wrap {
+            width: 100%;
+            @include floatClear();
+
+            .copyright {
+                float: left;
+                font: 400 11px/16px 'gothic a1';
+                color: #ccc;
+            }
+
+            .familySite {
+                float: right;
+
+                li {
+                    float: left;
+                    margin-left: 35px;
+
+                    a {
+                        font: 300 16px/16px 'biorhyme';
+                        color: #eee;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.h {
+    position: fixed; top: -9999px; 
+    opacity: 0;
+}
+
+
+
+
+
+@media screen and (max-width: 1179px) {
+    #header {
+        padding: 20px;
+        
+        .inner {
+            width: 100%;
+    
+            >h1.logo {
+                margin-bottom: 7px;
+    
+                a {
+                    font: 300 28px/1 'biorhyme expanded';
+                }
+            }
+    
+            >h2 {
+                font: 300 11.5px/1 'biorhyme';
+                margin-bottom: 50px;
+            }
+    
+            #gnb {
+
+                ul.personalMenu {
+                    right: 0px;
+
+                    li {
+                        margin-left: 15px;
+
+                        a {
+                            font: 300 11.5px/1 'biorhyme';
+                        }
+                    }
+                }
+    
+                .wrap {
+
+    
+                    ul.menu { // 1depth
+    
+                        >li {
+                            margin-right: 23px;
+
+                            >a {
+                                font: 200 16px/1 'biorhyme';
+                            }
+    
+                            >ul.menu2dep { // 2depth
+                                margin-top: 5px;
+    
+                                >li {
+                                    margin-bottom: 3px;
+    
+                                    >a {
+                                        font: 300 13px/1 'biorhyme';
+                                        letter-spacing: -0.5px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    .content {
+        padding-top: 162px;
+    
+        .sub_visual {
+            height: 300px;
+            background-size: auto 550px;
+        }
+    
+        .inner {
+            width: 100%;
+            margin: 0px;
+            padding: 50px 20px 100px;
+    
+            h1 {
+                font: 300 28px/1 'biorhyme expanded';
+                margin-bottom: 50px;
+            }
+        }
+    }
+    
+    #footer {
+        padding: 50px 20px;
+        
+        .upper {
+            width: 100%;
+    
+            .wrap {
+    
+                h1.logo {
+                    float: none;
+                    margin-bottom: 30px;
+        
+                    a {
+                        font: 200 20px/1 'biorhyme expanded';
+                    }
+                }
+        
+                .wrap {
+                    width: 100%;
+                    float: none;
+        
+                    .address {
+                        margin-top: 0px;
+        
+                        h2 {
+                            font: 300 14px/1 'biorhyme';
+                            margin-bottom: 8px;
+                        }
+                        p, a {
+                            font: 300 11.5px/1.6 'gothic a1';
+                        }
+                    }
+                }
+            }
+    
+            &::after {
+                margin: 50px 0 30px;
+            }
+        }
+    
+        .lower {
+            width: 100%;
+    
+            .wrap {
+                width: 100%;
+    
+                .familySite {
+                    float: none;
+                    @include floatClear();
+                    display: block;
+                    width: auto;
+                    margin-bottom: 15px;
+    
+                    li {
+                        float: right;
+                        margin-left: 20px;
+    
+                        a {
+                            font: 300 14px/1 'biorhyme';
+                            color: #eee;
+                        }
+                    }
+                }
+
+                .copyright {
+                    float: none;
+                    display: block;
+                    width: 100%;
+                    font: 300 10px/1 'gothic a1';
+                    text-align: right;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 539px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    #header {
+        padding: 0;
+        
+        .inner {
+            position: relative;
+            padding: 15px;
+    
+            >h1.logo {
+                margin: 0px;
+                margin-top: -10px;
+    
+                a {
+                    font: 300 20px/1 'biorhyme expanded';
+                }
+            }
+    
+            >h2 {
+                font: 300 10px/1 'biorhyme';
+                margin-bottom: 30px;
+            }
+
+            #btnGnb {
+                display: block;
+                width: 15px; height: 13px;
+                position: fixed;
+                z-index: 1;
+                top: 20px; right: 15px;
+
+                div {
+                    width: 15px; height: 1px;
+                    background-color: #000;
+                    transition: all 0.5s;
+                    transform-origin: left;
+                }
+
+                .line1 {
+                    position: absolute;
+                    top: 0; left: 0;
+                }
+                .line2 {
+                    position: absolute;
+                    top: 5px; left: 0;
+                }
+                .line3 {
+                    position: absolute;
+                    top: 10px; left: 0;
+                }
+
+                &.on {
+                    .line1 {
+                        transform: rotate(42deg);
+                    }
+                    .line2 {
+                        transform: translateX(10px);
+                        opacity: 0;
+                    }
+                    .line3 {
+                        transform: rotate(-42deg);
+                    }
+                }
+            }
+    
+            #gnb {
+                padding: 15px;
+                position: fixed;
+                top: 0; right: -100%;
+                width: 100%;
+                height: 100vh;
+                background-color: rgba(255,255,255,0.9);
+                transition: 0.5s;
+
+                &.on {
+                    top: 0; right: 0;
+                }
+
+                ul.personalMenu {
+                    position: absolute;
+                    top: 60px; left: 10px;
+
+                    li {
+                        margin-left: 15px;
+
+                        a {
+                            font: 300 12px/1 'biorhyme';
+                        }
+                    }
+                }
+    
+                .wrap {
+    
+                    ul.menu { // 1depth
+                        position: absolute;
+                        top: 100px; left: 0px;
+                        width: 100%;
+    
+                        >li {
+                            width: 100%;
+                            margin-left: 10px;
+                            float: none;
+                            text-align: left;
+                            margin-bottom: 12px;
+
+                            >a {
+                                font: 200 18px/1 'biorhyme';
+                            }
+    
+                            >ul.menu2dep { // 2depth
+                                margin-top: 5px;
+    
+                                >li {
+                                    margin-bottom: 3px;
+    
+                                    >a {
+                                        font: 300 13px/1 'biorhyme';
+                                        letter-spacing: -0.5px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    .content {
+        padding-top: 99px;
+    
+        .sub_visual {
+            height: calc(100vh - 130px);
+            background-size: auto 600px;
+        }
+    
+        .inner {
+            width: 100%;
+            margin: 0;
+            padding: 50px 15px 100px;
+    
+            h1 {
+                font: 300 20px/1 'biorhyme expanded';
+                margin-bottom: 30px;
+            }
+        }
+    }
+    
+    #footer {
+        padding: 50px 15px;
+        
+        .upper {
+    
+            .wrap {
+    
+                h1.logo {
+                    margin-bottom: 30px;
+        
+                    a {
+                        font: 200 16px/1 'biorhyme expanded';
+                    }
+                }
+        
+                .wrap {
+                    width: 100%;
+        
+                    .address {
+                        width: 100%;
+                        margin-bottom: 12px;
+                        @include floatClear();
+    
+                        &:nth-child(1) {
+                            width: 100%;
+                        }
+                        &:nth-child(2) {
+                            width: 100%;
+
+                            p {
+                                float: left;
+                                margin-right: 15px;
+                            }
+                        }
+                        &:nth-child(3) {
+                            width: 100%;
+                            margin-bottom: 0;
+
+                            a {
+                                float: left;
+                                margin-right: 15px;
+                            }
+                        }
+        
+                        h2 {
+                            font: 300 12px/1 'biorhyme';
+                            margin-bottom: 5px;
+                        }
+                        p, a {
+                            font: 300 10px/1.6 'gothic a1';
+                        }
+                    }
+                }
+            }
+    
+            &::after {
+                margin: 30px 0 10px;
+            }
+        }
+    
+        .lower {
+    
+            .wrap {
+    
+                .familySite {
+                    margin-bottom: 10px;
+    
+                    li {
+                        float: left;
+                        margin-left: 0px;
+                        margin-right: 15px;
+    
+                        a {
+                            font: 300 12px/1 'biorhyme';
+                            color: #eee;
+                        }
+                    }
+                }
+
+                .copyright {
+                    font: 300 9px/1 'gothic a1';
+                    text-align: left;
+                    color: #777;
+                }
+            }
+        }
+    }
+}
