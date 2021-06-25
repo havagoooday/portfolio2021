@@ -553,6 +553,11 @@ input {
   }
 }
 .about .sub_visual {
+  background-image: url(../img/pattern-13-2400.jpg);
+  background-size: 1300px;
+}
+
+.members .sub_visual {
   background-image: url(../img/pattern-10-2400.jpg);
 }
 
@@ -1004,11 +1009,6 @@ input {
 .map .sub_visual {
   background-image: url(../img/pattern-6-2400.jpg);
   background-size: 1280px;
-}
-
-.faq .sub_visual {
-  background-image: url(../img/pattern-13-2400.jpg);
-  background-size: 1800px;
 }
 
 .main .sub_visual {
