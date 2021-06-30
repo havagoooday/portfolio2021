@@ -20,9 +20,11 @@ a {
 }
 
 input {
-  outline: none;
   border: none;
   background: none;
+}
+input:focus {
+  outline: 1;
 }
 
 *::selection {
@@ -579,8 +581,22 @@ textarea {
   background-image: url(../img/pattern-10-2400.jpg);
 }
 .members h2 {
-  font: 300 24px/1 "biorhyme";
-  margin-bottom: 30px;
+  font: 300 44px/1 "biorhyme";
+  margin-bottom: 100px;
+}
+.members .important {
+  color: orangered;
+  margin-left: 5px;
+}
+.members .optional {
+  color: #aaa;
+  margin-left: 5px;
+}
+.members .wrap {
+  margin-bottom: 50px;
+}
+.members .wrap:last-of-type {
+  margin-bottom: 150px;
 }
 .members #terms {
   width: 100%;
@@ -588,15 +604,62 @@ textarea {
   padding: 15px 20px;
   font: normal 13px/1.4 "arial";
   color: #333;
-  border: 1px solid #777;
+  border: 1px solid #ccc;
   margin-bottom: 15px;
 }
-.members label[for=agree] {
-  font: 400 14px/1 "noto sans kr";
+.members label[for=agree], .members [for=agree2], .members [for=agree3] {
+  font: 400 14px/1.8 "noto sans kr";
 }
 .members input[type=checkbox] {
   margin-right: 8px;
-  margin-bottom: 100px;
+}
+.members input[type=text], .members [type=password], .members [type=tel] {
+  border-bottom: 1px solid orangered;
+  font: 400 14px/1 "noto sans kr";
+  height: 35px;
+  width: 50%;
+  padding: 0 10px;
+  transition: border 0.5s;
+  margin-right: 10px;
+}
+.members input[type=text]::placeholder, .members [type=password]::placeholder, .members [type=tel]::placeholder {
+  color: #000;
+  font-weight: 200;
+}
+.members input#year {
+  width: 25%;
+}
+.members select {
+  width: 25%;
+  height: 35px;
+  padding: 0 10px;
+  border: none;
+  border: 1px solid orangered;
+}
+.members select#month, .members select#day, .members select#address {
+  margin-left: 15px;
+}
+.members select#telecom {
+  margin-right: 15px;
+}
+.members table {
+  width: 66.66%;
+}
+.members table tr {
+  height: 70px;
+}
+.members table th {
+  width: 33.33%;
+  text-align: left;
+  font: 500 14px/1 "noto sans kr";
+}
+.members table td {
+  text-align: left;
+  font: 400 14px/1 "noto sans kr";
+}
+.members table td a {
+  font: 400 14px/1 "noto sans kr";
+  color: orangered;
 }
 
 .community .sub_visual {
@@ -622,7 +685,7 @@ textarea {
   padding: 10px;
   border-bottom: 1px solid #ccc;
   font: 300 13px/30px "noto sans kr";
-  transition: all 0.5s;
+  transition: border 0.5s;
 }
 .community .inner .search input[type=text]:focus {
   border-color: orangered;
@@ -864,15 +927,15 @@ textarea {
 .video .inner article .pic {
   display: block;
   width: 100%;
-  height: calc(1180px / 16 * 9);
-  background-size: 80%;
+  height: calc(1180px / 16 * 7);
+  background-size: 78%;
   background-position: center;
   margin-bottom: 50px;
   border-radius: 0px;
   transition: 1s;
 }
 .video .inner article .pic:hover {
-  background-size: 100%;
+  background-size: 85%;
 }
 .video .inner article > .con {
   width: 66.66%;
@@ -884,7 +947,7 @@ textarea {
 }
 .video .inner article > .con > p {
   font: 300 15px/1.6 "biorhyme";
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 .video .inner article > .con > span {
   font: 200 15px/1 "biorhyme";
@@ -939,9 +1002,9 @@ textarea {
   }
   .video .inner article .pic {
     display: block;
-    height: calc(100vw / 16 * 8.5);
-    background-size: 80%;
-    margin-bottom: 70px;
+    height: calc(100vw / 16 * 7);
+    background-size: 78%;
+    margin-bottom: 50px;
   }
   .video .inner article > .con {
     width: 75%;
@@ -953,8 +1016,8 @@ textarea {
     margin-bottom: 20px;
   }
   .video .inner article > .con > p {
-    font: 300 16px/1.6 "biorhyme";
-    margin-bottom: 20px;
+    font: 300 15px/1.6 "biorhyme";
+    margin-bottom: 15px;
   }
   .video .inner article > .con > span {
     font: 200 15px/1 "biorhyme";
@@ -1001,11 +1064,11 @@ textarea {
   }
   .video .inner article {
     padding: 30px 0;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
     border-top: 0px solid orangered;
   }
   .video .inner article .pic {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
   .video .inner article > .con {
     width: 100%;
@@ -1018,7 +1081,7 @@ textarea {
   }
   .video .inner article > .con > p {
     font: 300 12px/1.5 "biorhyme";
-    margin-bottom: 10px;
+    margin-bottom: 12px;
   }
   .video .inner article > .con > span {
     font: 200 12px/1 "biorhyme";

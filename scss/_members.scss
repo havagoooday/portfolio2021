@@ -7,8 +7,23 @@
     }
 
     h2 {
-        font: 300 24px/1 'biorhyme';
-        margin-bottom: 30px;
+        font: 300 44px/1 'biorhyme';
+        margin-bottom: 100px;
+    }
+
+    .important {
+        color: orangered;
+        margin-left: 5px;
+    }
+    .optional {
+        color: #aaa;
+        margin-left: 5px;
+    }
+
+    .wrap {
+        margin-bottom: 50px;
+        
+        &:last-of-type { margin-bottom: 150px; }
     }
 
     #terms {
@@ -16,16 +31,58 @@
         padding: 15px 20px;
         font: normal 13px/1.4 'arial';
         color: #333;
-        border: 1px solid #777;
+        border: 1px solid #ccc;
         margin-bottom: 15px;
     }
 
-    label[for=agree] {
-        font: 400 14px/1 'noto sans kr';
+    label[for=agree], [for=agree2], [for=agree3] {
+        font: 400 14px/1.8 'noto sans kr';
     }
-
     input[type=checkbox] {
         margin-right: 8px;
-        margin-bottom: 100px;
+    }
+    input[type=text], [type=password], [type=tel] {
+        border-bottom: 1px solid orangered;
+        font: 400 14px/1 'noto sans kr';
+        height: 35px; width: 50%;
+        padding: 0 10px;
+        transition: border 0.5s;
+        margin-right: 10px;
+
+        &::placeholder {
+            color: #000;
+            font-weight: 200;
+        }
+    }
+    input#year { width: 25%; }
+    select {
+        width: 25%; height: 35px;
+        padding: 0 10px;
+        border: none;
+        border: 1px solid orangered;
+
+        &#month, &#day, &#address { margin-left: 15px }
+        &#telecom { margin-right: 15px; }
+    }
+
+    table {
+        width: 66.66%;
+        tr {
+            height: 70px;
+        }
+        th {
+            width: 33.33%;
+            text-align: left;
+            font: 500 14px/1 'noto sans kr';
+        }
+        td {
+            text-align: left;
+            font: 400 14px/1 'noto sans kr';
+
+            a {
+                font: 400 14px/1 'noto sans kr';
+                color: orangered;
+            }
+        }
     }
 }
