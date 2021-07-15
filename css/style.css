@@ -572,9 +572,147 @@ textarea {
     color: #777;
   }
 }
+.about {
+  overflow: hidden;
+}
 .about .sub_visual {
   background-image: url(../img/pattern-13-2400.jpg);
   background-size: 1300px;
+}
+.about .wrap {
+  width: 100%;
+  position: relative;
+}
+.about .wrap::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+.about .wrap .bg1 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 350px;
+  height: 350px;
+  background-image: url(../img/pattern-11-2400.jpg);
+  background-size: 1200px;
+  background-position: center;
+  border-radius: 50%;
+}
+.about .wrap .bg2 {
+  position: absolute;
+  top: 50px;
+  left: -50px;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  border: 1px solid gold;
+  background-size: 1200px;
+  background-position: center;
+  transition: all 0.8s;
+}
+.about .wrap .bg2:hover {
+  background-color: gold;
+  top: 0px;
+  left: 0px;
+}
+.about .wrap .bg3 {
+  position: absolute;
+  top: 600px;
+  right: -600px;
+  width: 500px;
+  height: 500px;
+  background-color: gold;
+  background-size: 1600px;
+  background-position: center;
+  border-radius: 50%;
+  transition: all 1.5s;
+  transform-origin: center;
+}
+.about .wrap .bg3:hover {
+  transform: scale(1000%);
+}
+.about .wrap article {
+  width: 66.66%;
+  margin-bottom: 300px;
+  position: relative;
+  z-index: 1;
+}
+.about .wrap article:nth-of-type(odd) {
+  float: right;
+}
+.about .wrap article:nth-of-type(even) {
+  float: left;
+}
+.about .wrap article h2 {
+  font: 300 44px/1.3 "biorhyme";
+  margin-bottom: 20px;
+}
+.about .wrap article p {
+  font: 300 15px/1.6 "biorhyme";
+  margin-bottom: 15px;
+}
+.about .wrap .important {
+  color: orangered;
+  font-weight: 400;
+}
+.about .organization {
+  width: 100%;
+}
+.about .organization ul.dep1 {
+  width: 100%;
+  display: block;
+}
+.about .organization ul.dep1 li {
+  width: 100%;
+  text-align: center;
+}
+.about .organization ul.dep1 li .circle {
+  margin: 50px auto 30px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: orangered;
+}
+.about .organization ul.dep1 li span {
+  font: 300 24px/1.3 "biorhyme";
+}
+.about .organization ul.dep1 li ul.dep2 {
+  width: 100%;
+}
+.about .organization ul.dep1 li ul.dep2::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+.about .organization ul.dep1 li ul.dep2 > li {
+  width: 50%;
+  float: left;
+}
+.about .organization ul.dep1 li ul.dep2 ul.dep3 {
+  width: 100%;
+}
+.about .organization ul.dep1 li ul.dep2 ul.dep3 > li {
+  width: 25%;
+  float: left;
+}
+.about .organization ul.dep1 li ul.dep2 ul.dep3 > li .circle {
+  width: 100px;
+  height: 100px;
+}
+.about .organization ul.dep1 li ul.dep2 ul.dep3 > li ul.dep4 {
+  margin-top: 12px;
+}
+.about .organization ul.dep1 li ul.dep2 ul.dep3 > li ul.dep4 li {
+  margin-bottom: 8px;
+}
+.about .organization ul.dep1 li ul.dep2 ul.dep3 > li ul.dep4 li .circle {
+  display: none;
+  width: 30px;
+  height: 30px;
+}
+.about .organization ul.dep1 li ul.dep2 ul.dep3 > li ul.dep4 li span {
+  font-size: 18px;
 }
 
 .members .sub_visual {

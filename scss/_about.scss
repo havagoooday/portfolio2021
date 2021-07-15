@@ -1,10 +1,147 @@
 @charset 'utf-8';
 
 .about {
+    overflow: hidden;
 
     .sub_visual {
         background-image: url(../img/pattern-13-2400.jpg);
         background-size: 1300px;
     }
     
+    .wrap {
+        width: 100%;
+        position: relative;
+        &::after {display: block; content: ''; clear: both;}
+
+        .bg1 {
+            position: absolute;
+            top: 0px; left: 0px;
+            width: 350px; height: 350px;
+            background-image: url(../img/pattern-11-2400.jpg);
+            background-size: 1200px;
+            background-position: center;
+            border-radius: 50%;
+        }
+
+        .bg2 {
+            position: absolute;
+            top: 50px; left: -50px;
+            width: 350px; height: 350px;
+            border-radius: 50%;
+            border: 1px solid gold;
+            background-size: 1200px;
+            background-position: center;
+            transition: all 0.8s;
+
+            &:hover {
+                background-color: gold;
+                top: 0px; left: 0px;
+                // java 로 article 에 hover 하면 변경되도록 변경
+            }
+        }
+
+        .bg3 {
+            position: absolute;
+            top: 600px; right: -600px;
+            width: 500px; height: 500px;
+            background-color: gold;
+            background-size: 1600px;
+            background-position: center;
+            border-radius: 50%;
+            transition: all 1.5s;
+            transform-origin: center;
+
+            &:hover {
+                transform: scale(1000%);
+            }
+        }
+
+        article {
+            width: 66.66%;
+            margin-bottom: 300px;
+            position: relative;
+            z-index: 1;
+
+            &:nth-of-type(odd) { float: right; }
+            &:nth-of-type(even) { float: left; }
+
+            h2 {
+                font: 300 44px/1.3 'biorhyme';
+                margin-bottom: 20px;
+            }
+    
+            p {
+                font: 300 15px/1.6 'biorhyme';
+                margin-bottom: 15px;
+            }
+        }
+
+        .important { color: orangered; font-weight: 400;}
+    }
+
+    .organization {
+        width: 100%;
+
+        ul.dep1 {
+            width: 100%;
+            display: block;
+
+            li {
+                width: 100%;
+                text-align: center;
+
+                .circle {
+                    margin: 50px auto 30px;
+                    width: 150px; height: 150px;
+                    border-radius: 50%;
+                    background-color: orangered;
+                }
+
+                span {
+                    font: 300 24px/1.3 'biorhyme';
+                }
+
+                ul.dep2 {
+                    width: 100%;
+                    &::after {display: block; content: ''; clear: both;}
+
+                    >li {
+                        width: 50%;
+                        float: left;
+
+                    }
+
+                    ul.dep3 {
+                        width: 100%;
+
+                        >li {
+                            width: 25%;
+                            float: left;
+
+                            .circle {
+                                width: 100px; height: 100px;
+                            }
+
+                            ul.dep4 {
+                                margin-top: 12px;
+
+                                li {
+                                    margin-bottom: 8px;
+
+                                    .circle {
+                                        display: none;
+                                        width: 30px; height: 30px;
+                                    }
+                                    span {
+                                        font-size: 18px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
 }
