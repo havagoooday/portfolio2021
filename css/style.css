@@ -659,60 +659,134 @@ textarea {
 .about .organization {
   width: 100%;
 }
-.about .organization ul.dep1 {
+.about .organization > article {
   width: 100%;
-  display: block;
+  position: relative;
+  margin-bottom: 200px;
 }
-.about .organization ul.dep1 li {
-  width: 100%;
-  text-align: center;
-}
-.about .organization ul.dep1 li .circle {
-  margin: 50px auto 30px;
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  background-color: orangered;
-}
-.about .organization ul.dep1 li span {
-  font: 300 24px/1.3 "biorhyme";
-}
-.about .organization ul.dep1 li ul.dep2 {
-  width: 100%;
-}
-.about .organization ul.dep1 li ul.dep2::after {
+.about .organization > article::after {
   display: block;
   content: "";
   clear: both;
 }
-.about .organization ul.dep1 li ul.dep2 > li {
+.about .organization > article:nth-of-type(even) .img {
+  float: right;
+}
+.about .organization > article:nth-of-type(even) .txt {
+  transform: translate(100px, 50px);
+}
+.about .organization > article:nth-of-type(even) .txt:hover {
+  transform: translate(0px, 50px);
+}
+.about .organization > article *::selection {
+  color: black;
+  background-color: white;
+}
+.about .organization > article .img {
+  width: 50%;
+  height: calc(1180px / 2);
+  background-size: 250%;
+  background-position: center;
+  float: left;
+}
+.about .organization > article .hava {
+  background-image: url(../img/pattern-12-2400.jpg);
+  background-size: 400%;
+}
+.about .organization > article .chris {
+  background-image: url(../img/pattern-8-2400.jpg);
+}
+.about .organization > article .felix {
+  background-image: url(../img/pattern-9-2400.jpg);
+}
+.about .organization > article .txt {
   width: 50%;
   float: left;
+  padding: 50px;
+  transform: translate(-100px, 50px);
+  background-color: orangered;
+  transition: all 1s;
 }
-.about .organization ul.dep1 li ul.dep2 ul.dep3 {
+.about .organization > article .txt:hover {
+  transform: translate(0px, 50px);
+  background: none;
+}
+.about .organization > article .txt:hover h2, .about .organization > article .txt:hover h3, .about .organization > article .txt:hover p {
+  color: orangered;
+}
+.about .organization > article .txt h2, .about .organization > article .txt h3, .about .organization > article .txt p {
+  color: white;
+}
+.about .organization > article .txt h2 {
+  font: 300 60px/1.2 "biorhyme expanded";
+  margin-bottom: 12px;
+}
+.about .organization > article .txt h3 {
+  font: 300 17px/1 "biorhyme";
+  margin-bottom: 80px;
+  letter-spacing: 0.5px;
+}
+.about .organization > article .txt p {
+  width: 100%;
+  font: 300 15px/1.6 "biorhyme";
+}
+.about .organization > .wrap {
   width: 100%;
 }
-.about .organization ul.dep1 li ul.dep2 ul.dep3 > li {
-  width: 25%;
+.about .organization > .wrap .dep3 {
+  width: calc((1180px - 50px) / 2);
   float: left;
+  margin-right: 50px;
+  margin-bottom: 50px;
 }
-.about .organization ul.dep1 li ul.dep2 ul.dep3 > li .circle {
-  width: 100px;
-  height: 100px;
+.about .organization > .wrap .dep3:nth-of-type(2n) {
+  margin-right: 0px;
 }
-.about .organization ul.dep1 li ul.dep2 ul.dep3 > li ul.dep4 {
-  margin-top: 12px;
+.about .organization > .wrap .dep3:nth-child(1) .img, .about .organization > .wrap .dep3:nth-child(5) .img {
+  background-image: url(../img/pattern-7-2400.jpg);
 }
-.about .organization ul.dep1 li ul.dep2 ul.dep3 > li ul.dep4 li {
-  margin-bottom: 8px;
+.about .organization > .wrap .dep3:nth-child(2) .img, .about .organization > .wrap .dep3:nth-child(3) .img, .about .organization > .wrap .dep3:nth-child(6) .img {
+  background-image: url(../img/pattern-13-2400.jpg);
 }
-.about .organization ul.dep1 li ul.dep2 ul.dep3 > li ul.dep4 li .circle {
-  display: none;
-  width: 30px;
-  height: 30px;
+.about .organization > .wrap .dep3:nth-child(4) .img {
+  background-image: url(../img/pattern-5-2400.jpg);
 }
-.about .organization ul.dep1 li ul.dep2 ul.dep3 > li ul.dep4 li span {
-  font-size: 18px;
+.about .organization > .wrap .dep3 .img {
+  width: 100%;
+  height: 300px;
+  background-color: gold;
+  background-size: 300%;
+  margin-bottom: 30px;
+}
+.about .organization > .wrap .dep3 .txt {
+  width: 66.66%;
+  transform: translate(150px, -200px);
+  background-color: orangered;
+  padding: 15px 30px 15px;
+  transition: all 1s;
+}
+.about .organization > .wrap .dep3 .txt:hover {
+  transform: translate(150px, -20px);
+  background: none;
+}
+.about .organization > .wrap .dep3 .txt:hover h2, .about .organization > .wrap .dep3 .txt:hover h3, .about .organization > .wrap .dep3 .txt:hover p {
+  color: orangered;
+}
+.about .organization > .wrap .dep3 .txt h2, .about .organization > .wrap .dep3 .txt h3, .about .organization > .wrap .dep3 .txt p {
+  color: white;
+}
+.about .organization > .wrap .dep3 .txt h2 {
+  font: 300 44px/1.2 "biorhyme expanded";
+  margin-bottom: 20px;
+}
+.about .organization > .wrap .dep3 .txt h3 {
+  font: 300 15px/1 "biorhyme";
+  margin-bottom: 30px;
+  letter-spacing: 0.5px;
+}
+.about .organization > .wrap .dep3 .txt p {
+  width: 100%;
+  font: 300 13px/1.5 "biorhyme";
 }
 
 .members .sub_visual {
