@@ -71,7 +71,7 @@ for (var i = 0; i < markerOptions.length; i ++) {
         }
     })(i);
 
-    kakao.maps.event.addListener(marker, 'click', moveTo(marker.position));
+    //kakao.maps.event.addListener(marker, 'click', moveTo(marker.position));
 }
 
 function moveTo(target) {
