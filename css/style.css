@@ -1323,6 +1323,10 @@ textarea {
   background-image: url(../img/pattern-6-2400.jpg);
   background-size: 1280px;
 }
+.map #map {
+  width: 100%;
+  height: 720px;
+}
 
 .main .sub_visual {
   background-image: url(../img/pattern-4-2400.jpg);
