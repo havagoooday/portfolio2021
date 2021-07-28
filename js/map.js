@@ -1,9 +1,9 @@
 var container = document.getElementById("map");
-var branch_btns = document.querySelectorAll(".branch li");
+var branch_btns = document.querySelectorAll(".branch article a");
 
 var options = {
 	center: new kakao.maps.LatLng(33.4513, 126.572),
-	level: 3
+	level: 4
 };
 
 var map = new kakao.maps.Map(container, options);
@@ -17,30 +17,29 @@ map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
 //여러개의 마커를 표시하기 위한 위치와 title 객체 배열
 var markerOptions = [
     {
-        title: '1호점',
-        latlng: new kakao.maps.LatLng(33.450701, 126.570667),
-        imgSrc: '../img/marker-01.png',
-        imageSize: new kakao.maps.Size(40, 53.35),
-        imageOption: {offset: new kakao.maps.Point(20, 26.6)},
-        btn: branch_btns[0]
-    },
-    {
-        title: '2호점',
-        latlng: new kakao.maps.LatLng(33.452572, 126.570941),
-        imgSrc: '../img/marker-02.png',
-        imageSize: new kakao.maps.Size(40, 53.35),
-        imageOption: {offset: new kakao.maps.Point(20, 26.6)},
-        btn: branch_btns[1]
-    },
-    {
         title: '3호점',
         latlng: new kakao.maps.LatLng(33.4498, 126.574),
         imgSrc: '../img/marker-03.png',
         imageSize: new kakao.maps.Size(40, 53.35),
         imageOption: {offset: new kakao.maps.Point(20, 26.6)},
         btn: branch_btns[2]
+    },
+    {
+        title: '2호점',
+        latlng: new kakao.maps.LatLng(33.45285, 126.570941),
+        imgSrc: '../img/marker-02.png',
+        imageSize: new kakao.maps.Size(40, 53.35),
+        imageOption: {offset: new kakao.maps.Point(20, 26.6)},
+        btn: branch_btns[1]
+    },
+    {
+        title: '1호점',
+        latlng: new kakao.maps.LatLng(33.4509, 126.570667),
+        imgSrc: '../img/marker-01.png',
+        imageSize: new kakao.maps.Size(40, 53.35),
+        imageOption: {offset: new kakao.maps.Point(20, 26.6)},
+        btn: branch_btns[0]
     }
-
 ]
 
 for (var i = 0; i < markerOptions.length; i ++) {
