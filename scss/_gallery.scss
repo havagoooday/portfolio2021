@@ -5,5 +5,42 @@
     .sub_visual {
         background-image: url(../img/pattern-4-2400.jpg);
     }
+
+    .inner {
+
+        #gallery {
+
+            ul {
+                width: 100%;
+                @include floatClear;
+
+                li {
+                    width: 33.33%;
+                    float: left;
+
+                    .inner {
+                        width: 100%;
+                        padding: 0; margin: 0;
+                        position: relative;
+
+                        a {
+                            width: 100%;
+                            display: block;
+                            font-size: 0;
+
+                            img { width: 100%; }
+                        }
+
+                        h2 {
+                            font: 300 44px/1.3 'biorhyme';
+                            color: #fff;
+                            position: absolute;
+                            bottom: 20px; left: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
     
 }
