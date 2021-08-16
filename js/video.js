@@ -80,7 +80,7 @@ function createPop(vidId){
                 .css({
                     width: "100%", height: "100%",
                     position: "fixed", top: 0, left: 0,
-                    backgroundColor: "rgba(255, 68, 0, 0.9)",
+                    backgroundColor: "rgba(255, 255, 255, 0.9)",
                     display: "none", boxSizing: "border-box"
                 })
                 .append(
