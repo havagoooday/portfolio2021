@@ -1184,7 +1184,7 @@ textarea {
 .pop .close div {
   width: 30px;
   height: 1px;
-  background-color: #fff;
+  background-color: orangered;
   transition: all 0.5s;
   transform-origin: left;
 }
