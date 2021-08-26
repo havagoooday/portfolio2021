@@ -90,12 +90,12 @@
     <section class="content members">
         <div class="sub_visual"></div>
         <div class="inner">
-            <h1>members</h1>
+            <span>Members</span>
 
             <form action="/" method="POST">
                 <fieldset>
                     <legend class="h">회원가입 입력양식</legend>
-                    <h2><label for="terms">Terms & Policy</label></h2>
+                    <h1><label for="terms">Terms & Policy</label></h1>
 
                     <div class="wrap">
                         <textarea name="terms" id="terms" cols="30" rows="10">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit laudantium quibusdam iure sequi quidem explicabo quod eaque minima! Facilis atque perspiciatis, incidunt ut quam et sint repellendus sequi hic ex, consequuntur at nemo aspernatur odio accusamus optio corporis, sed mollitia. Esse labore quis mollitia, eveniet asperiores perferendis at soluta quae tempora ipsa voluptates culpa consequuntur nihil architecto dicta ratione quam vel vitae a. Ut fugiat vel nemo cumque illum ab. Non, rem provident! Quasi, illum, dolor, ipsum fugiat pariatur repellendus adipisci sed excepturi sint ea autem? Tenetur possimus hic soluta quidem? Quisquam alias labore dolore quae esse possimus expedita omnis aliquam placeat, ad incidunt id ullam quibusdam corporis fuga laborum eligendi rem qui repellendus, iure est nobis earum reprehenderit! Corporis iure commodi aut omnis, laboriosam quisquam adipisci esse debitis sapiente sed delectus libero labore porro veniam doloremque, dolore ipsam officia quod deleniti dignissimos nostrum. Atque cum dolorum, fuga sunt molestiae fugiat ipsa mollitia. Iusto quas autem iure distinctio, quis, corporis quae minima id aliquam amet quam facere atque quidem ut itaque, non impedit. Facere esse pariatur quis ducimus libero vel, sit mollitia nesciunt reprehenderit blanditiis fuga nostrum voluptatibus labore tempora in cum. Nostrum id sunt consectetur distinctio deleniti repellat sapiente maxime officiis dicta iste repudiandae enim culpa ab cupiditate tempora non architecto praesentium cumque, ratione explicabo. Aut error doloremque non facere voluptatem dicta, eos natus, quos incidunt asperiores similique facilis, cum ipsam nihil saepe voluptate commodi? Velit inventore doloremque beatae aliquid ut laudantium doloribus esse non reprehenderit, repellat ab quas nisi saepe vero laboriosam voluptates eum dicta. Modi et rem, aut sit dolorem iusto velit laudantium quam? Pariatur ipsam maxime accusamus enim saepe quae sunt iste recusandae, aut doloremque quam. Nihil debitis impedit earum placeat alias nam ex vitae qui quisquam sint ipsa voluptatum ea exercitationem, ullam mollitia culpa error. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus totam natus nihil neque placeat eaque voluptates nesciunt ex. Blanditiis ipsa enim expedita ab? Autem obcaecati nemo quisquam fugit iste maxime, minima aliquam tempore aperiam in atque itaque voluptatem facilis recusandae excepturi neque incidunt molestiae voluptas quas voluptatum pariatur nulla nobis? Adipisci, molestias possimus perferendis, enim sequi sunt facilis ullam odit esse quam cupiditate eius, dolor omnis iure? Sunt maxime soluta porro veniam similique est adipisci iste ipsum quia quidem provident consequatur magni ab laudantium inventore, ratione illo, odio dolore impedit asperiores? Ad laudantium reprehenderit tempora ducimus aspernatur magni nobis consectetur deserunt sequi omnis et natus fugit officiis facilis quidem praesentium, a commodi necessitatibus obcaecati laboriosam quos perferendis magnam? Cumque nobis nesciunt cupiditate deserunt at quibusdam temporibus odit, molestiae mollitia quod voluptates nihil consectetur non voluptatum possimus ipsa totam placeat nam aperiam, eos dolor eveniet. Harum quisquam debitis totam soluta, voluptatum qui temporibus! Quo repudiandae impedit eveniet earum. Quis, molestiae? Quod perferendis ut id incidunt molestiae iusto voluptatum a explicabo quas! Nobis doloremque facere exercitationem. Delectus fugiat amet porro veritatis mollitia sunt quaerat quas sit quod? Consequuntur perferendis sit aperiam sequi earum optio, non id nisi fuga minus rem voluptate, distinctio quo architecto odit amet. Ratione praesentium in nulla! Maxime enim tempore culpa! Quis sunt esse in autem ab fugiat quo modi, maxime, deleniti dolorum molestiae ex iusto harum libero doloremque suscipit tempora dicta omnis sequi. Et distinctio itaque tempore, ab obcaecati ducimus officiis modi, dolor, quas repellat cupiditate perferendis eaque odit ipsam molestias amet mollitia rem deserunt sunt voluptatibus! Tenetur quam nobis officiis, voluptatum excepturi rem dolor laborum facilis? Eveniet, at quibusdam earum quis iusto voluptas, illo vel voluptates consequatur officiis distinctio fugiat commodi, totam saepe non enim accusamus impedit cumque minima fugit ex. Autem odit praesentium officiis aut suscipit?</textarea>
@@ -107,110 +107,119 @@
                         <label for="agree3"><input type="checkbox" name="agree3" id="agree3" value="agree"><span class="optional">[선택]</span> 광고성 정보 수신 및 마케팅 활용에 동의합니다.
                     </div>
 
-                    <h2>Information</h2>
-                    <table summary="회원 아이디, 비밀번호, 이름, 이메일, 전화번호 입력양식">
-                        <caption class="h">회원정보 입력 테이블</caption>
+                    <h1>Information</h1>
+                    <div class="wrap">
+                        <table summary="회원 아이디, 비밀번호, 이름, 이메일, 전화번호 입력양식">
+                            <caption class="h">회원정보 입력 테이블</caption>
+    
+                            <tr>
+                                <th><label for="id">아이디<span class="important">*</span></label></th>
+                                <td><input type="text" id="id" name="id" placeholder="아이디를 입력해주세요.">
+                                <a href="#">중복확인</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><label for="pw">비밀번호<span class="important">*</span></label></th>
+                                <td><input type="password" id="pw" name="pw" placeholder="비밀번호를 입력해주세요."></td>
+                            </tr>
+                            <tr>
+                                <th><label for="pw2">비밀번호 재확인<span class="important">*</span></label></th>
+                                <td><input type="password" id="pw2" name="pw2" placeholder="비밀번호를 재입력해주세요."></td>
+                            </tr>
+                            <tr>
+                                <th><label for="name">이름<span class="important">*</span></label></th>
+                                <td><input type="text" id="name" name="name" placeholder="이름을 입력해주세요."></td>
+                            </tr>
+                            <tr>
+                                <th><label for="birth">생년월일<span class="important">*</span></label></th>
+                                <td>
+                                    <input type="text" id="year" name="year" placeholder="년도">
+                                    <select name="month" id="month">
+                                        <option value="err">월</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
+                                    </select>
+                                
+                                    <select name="day" id="day">
+                                        <option value="err">일</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
+                                        <option value="13">13</option>
+                                        <option value="14">14</option>
+                                        <option value="15">15</option>
+                                        <option value="16">16</option>
+                                        <option value="17">17</option>
+                                        <option value="18">18</option>
+                                        <option value="19">19</option>
+                                        <option value="20">20</option>
+                                        <option value="21">21</option>
+                                        <option value="22">22</option>
+                                        <option value="23">23</option>
+                                        <option value="24">24</option>
+                                        <option value="25">25</option>
+                                        <option value="26">26</option>
+                                        <option value="27">27</option>
+                                        <option value="28">28</option>
+                                        <option value="29">29</option>
+                                        <option value="30">30</option>
+                                        <option value="31">31</option>
+                                    </select>
+                                    
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><label for="email">이메일<span class="important">*</span></label></th>
+                                <td>
+                                    <input type="text" id="email" name="email" placeholder="이메일을 입력해주세요."> @ 
+                                    <select name="address" id="address">
+                                        <option value="naver">naver.com</option>
+                                        <option value="google">gmail.com</option>
+                                        <option value="nate">nate.com</option>
+                                        <option value="daum">daum.net</option>
+                                        <option value="">직접 입력하기</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><label for="phoneNum">전화번호<span class="important">*</span></label></th>
+                                <td>
+                                    <select name="phoneNum" id="telecom">
+                                        <option value="err">통신사</option>
+                                        <option value="skt">SKT</option>
+                                        <option value="kt">KT</option>
+                                        <option value="lg">LG</option>
+                                        <option value="알뜰폰">알뜰폰</option>
+                                    </select>
+                                    <input type="tel" id="phoneNum" name="phoneNum" placeholder="번호를 입력해주세요.">
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
 
-                        <tr>
-                            <th><label for="id">아이디<span class="important">*</span></label></th>
-                            <td><input type="text" id="id" name="id" placeholder="아이디를 입력해주세요.">
-                            <a href="#">중복확인</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th><label for="pw">비밀번호<span class="important">*</span></label></th>
-                            <td><input type="password" id="pw" name="pw" placeholder="비밀번호를 입력해주세요."></td>
-                        </tr>
-                        <tr>
-                            <th><label for="pw2">비밀번호 재확인<span class="important">*</span></label></th>
-                            <td><input type="password" id="pw2" name="pw2" placeholder="비밀번호를 재입력해주세요."></td>
-                        </tr>
-                        <tr>
-                            <th><label for="name">이름<span class="important">*</span></label></th>
-                            <td><input type="text" id="name" name="name" placeholder="이름을  입력해주세요."></td>
-                        </tr>
-                        <tr>
-                            <th><label for="birth">생년월일<span class="important">*</span></label></th>
-                            <td>
-                                <input type="text" id="year" name="year" placeholder="년도">년
-                                <select name="month" id="month">
-                                    <option value="err">월</option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                    <option value="6">6</option>
-                                    <option value="7">7</option>
-                                    <option value="8">8</option>
-                                    <option value="9">9</option>
-                                    <option value="10">10</option>
-                                    <option value="11">11</option>
-                                    <option value="12">12</option>
-                                </select>
-                                <select name="day" id="day">
-                                    <option value="err">일</option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                    <option value="6">6</option>
-                                    <option value="7">7</option>
-                                    <option value="8">8</option>
-                                    <option value="9">9</option>
-                                    <option value="10">10</option>
-                                    <option value="11">11</option>
-                                    <option value="12">12</option>
-                                    <option value="13">13</option>
-                                    <option value="14">14</option>
-                                    <option value="15">15</option>
-                                    <option value="16">16</option>
-                                    <option value="17">17</option>
-                                    <option value="18">18</option>
-                                    <option value="19">19</option>
-                                    <option value="20">20</option>
-                                    <option value="21">21</option>
-                                    <option value="22">22</option>
-                                    <option value="23">23</option>
-                                    <option value="24">24</option>
-                                    <option value="25">25</option>
-                                    <option value="26">26</option>
-                                    <option value="27">27</option>
-                                    <option value="28">28</option>
-                                    <option value="29">29</option>
-                                    <option value="30">30</option>
-                                    <option value="31">31</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th><label for="email">이메일<span class="important">*</span></label></th>
-                            <td>
-                                <input type="text" id="email" name="email" placeholder="이메일을  입력해주세요."> @ 
-                                <select name="address" id="address">
-                                    <option value="naver">naver.com</option>
-                                    <option value="google">gmail.com</option>
-                                    <option value="nate">nate.com</option>
-                                    <option value="daum">daum.net</option>
-                                    <option value="">직접 입력하기</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th><label for="phoneNum">전화번호<span class="important">*</span></label></th>
-                            <td>
-                                <select name="phoneNum" id="telecom">
-                                    <option value="err">통신사</option>
-                                    <option value="skt">SKT</option>
-                                    <option value="kt">KT</option>
-                                    <option value="lg">LG</option>
-                                    <option value="알뜰폰">알뜰폰</option>
-                                </select>
-                                <input type="tel" id="phoneNum" name="phoneNum" placeholder="번호를 입력해주세요.">
-                            </td>
-                        </tr>
-                    </table>
+                    <div class="btn">
+                        <input type="reset" id="reset" value="Reset">
+                        <input type="submit" id="submit" value="Join">
+                    </div>
                 </fieldset>
             </form>
         </div>

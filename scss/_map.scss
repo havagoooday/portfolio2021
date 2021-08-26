@@ -7,48 +7,26 @@
         background-size: 1280px;
     }
 
-    #map {
-        width: 100%;
-        height: 500px;
-        margin-bottom: 80px;
-    }
-
     .inner {
+        overflow: visible;
 
-        .contacts {
+        >.wrap {
+            position: relative;
+            height: calc(500px - 80px);
 
-            .wrap {
-                &::after {display: block; content: ''; clear: both;}
-                text-align: center;
-
-                article {
-                    width: 25%;
-                    float: left;
-
-                    span {
-                        display: block;
-                        font-size: 44px;
-                        color: orangered;
-                        margin-bottom: 30px;
-                    }
-
-                    .txt {
-
-                        >h2 {
-                            font: 400 24px/1 'biorhyme';
-                            margin-bottom: 12px;
-                        }
-        
-                        >p {
-                            font: 300 16px/1.6 'biorhyme';
-                        }
-                    }
-                }
+            #map {
+                width: 100vw;
+                height: 500px;
+                margin-top: -80px;
+                position: absolute;
+                top: 0px; left: 50%;
+                transform: translate(-50%);
             }
         }
 
         .branch {
             width: 100%;
+            margin-top: 80px;
 
             &::after { display: block; content: ''; clear: both; }
 
@@ -87,6 +65,39 @@
                 }
             }
         }
+
+        .contacts {
+
+            .wrap {
+                &::after {display: block; content: ''; clear: both;}
+                text-align: center;
+
+                article {
+                    width: 25%;
+                    float: left;
+
+                    span {
+                        display: block;
+                        font-size: 44px;
+                        color: orangered;
+                        margin-bottom: 30px;
+                    }
+
+                    .txt {
+
+                        >h2 {
+                            font: 400 24px/1 'biorhyme';
+                            margin-bottom: 12px;
+                        }
+        
+                        >p {
+                            font: 300 16px/1.6 'biorhyme';
+                        }
+                    }
+                }
+            }
+        }
+
 
         .directions {
 

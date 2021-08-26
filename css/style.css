@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=BioRhyme+Expanded:wght@200;300&family=BioRhyme:wght@200;300&family=Noto+Serif+KR:wght@200;300;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300;400;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=BioRhyme&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=BioRhyme+Expanded&family=BioRhyme:wght@800&display=swap");
 /* reset */
 * {
   margin: 0;
@@ -143,7 +144,7 @@ textarea {
 }
 .content .sub_visual {
   width: 100%;
-  height: 400px;
+  height: 500px;
   background: #222;
   background-repeat: repeat;
   background-size: auto 700px;
@@ -152,14 +153,21 @@ textarea {
 .content .inner {
   width: 1180px;
   margin: 0px auto 0;
+  padding: 80px 0;
+}
+.content .inner > span {
+  display: inline-block;
+  margin: 0px;
+  font: 300 18px/1 "biorhyme expanded";
+  text-decoration: overline;
+  text-decoration-thickness: 1px;
+  color: orangered;
 }
 .content .inner h1 {
   display: inline-block;
-  font: 300 32px/1 "biorhyme expanded";
-  color: black;
-  border-top: 2px solid black;
-  padding-top: 25px;
-  margin: 300px 0 160px;
+  width: 100%;
+  font: 300 44px/1 "biorhyme expanded";
+  margin: 240px 0 160px;
 }
 
 #footer {
@@ -799,7 +807,7 @@ textarea {
 }
 .members h2 {
   font: 300 44px/1 "biorhyme";
-  margin-bottom: 100px;
+  margin-bottom: 80px;
 }
 .members .important {
   color: orangered;
@@ -810,10 +818,13 @@ textarea {
   margin-left: 5px;
 }
 .members .wrap {
-  margin-bottom: 50px;
+  width: 100%;
+  margin-bottom: 80px;
 }
-.members .wrap:last-of-type {
-  margin-bottom: 150px;
+.members .wrap::after {
+  content: "";
+  display: block;
+  clear: both;
 }
 .members #terms {
   width: 100%;
@@ -831,27 +842,39 @@ textarea {
   margin-right: 8px;
 }
 .members input[type=text], .members [type=password], .members [type=tel] {
-  border-bottom: 1px solid orangered;
-  font: 400 14px/1 "noto sans kr";
-  height: 35px;
-  width: 50%;
-  padding: 0 10px;
+  border-bottom: 1px solid #ccc;
+  font: 500 14px/1 "noto sans kr";
+  width: 100%;
+  padding: 15px 10px;
   transition: border 0.5s;
-  margin-right: 10px;
 }
 .members input[type=text]::placeholder, .members [type=password]::placeholder, .members [type=tel]::placeholder {
-  color: #000;
-  font-weight: 200;
+  color: #aaa;
+  font-weight: 400;
+}
+.members input[type=text]:focus, .members [type=password]:focus, .members [type=tel]:focus {
+  border-color: orangered;
 }
 .members input#year {
-  width: 25%;
+  width: calc((100% - 38px) / 3);
+}
+.members input#email {
+  width: calc(100% - 50px - ((100% - 36px) / 3));
+  margin-right: 15px;
+}
+.members input#phoneNum {
+  width: calc(100% - 19px - ((100% - 36px) / 3));
 }
 .members select {
-  width: 25%;
-  height: 35px;
+  width: calc((100% - 36px) / 3);
+  height: 40px;
   padding: 0 10px;
   border: none;
-  border: 1px solid orangered;
+  border: 1px solid #ccc;
+  transition: border 0.5s;
+}
+.members select:focus {
+  border-color: orangered;
 }
 .members select#month, .members select#day, .members select#address {
   margin-left: 15px;
@@ -859,11 +882,27 @@ textarea {
 .members select#telecom {
   margin-right: 15px;
 }
+.members .btn {
+  width: fit-content;
+  float: right;
+}
+.members .btn input#submit, .members .btn input#reset {
+  font: 300 44px/1 "biorhyme";
+  text-decoration: overline;
+  overflow: visible;
+  cursor: pointer;
+  margin-left: 80px;
+}
+.members .btn input#submit:hover, .members .btn input#reset:hover {
+  color: orangered;
+}
 .members table {
+  float: right;
   width: 66.66%;
+  margin-bottom: 80px;
 }
 .members table tr {
-  height: 70px;
+  height: 80px;
 }
 .members table th {
   width: 33.33%;
@@ -873,10 +912,17 @@ textarea {
 .members table td {
   text-align: left;
   font: 400 14px/1 "noto sans kr";
+  position: relative;
 }
 .members table td a {
   font: 400 14px/1 "noto sans kr";
   color: orangered;
+  position: absolute;
+  bottom: 35px;
+  right: 0px;
+}
+.members table td a:focus, .members table td a:hover {
+  text-decoration: overline;
 }
 
 .community .sub_visual {
@@ -963,7 +1009,7 @@ textarea {
   color: #333;
 }
 .community .inner .pagination a:hover {
-  font-weight: 600;
+  font-weight: 400;
   color: #ff4500;
   text-decoration: overline;
 }
@@ -972,7 +1018,7 @@ textarea {
   margin: 0 20px;
 }
 .community .inner .pagination .numbers .on {
-  font-weight: bold;
+  font-weight: 400;
   color: #ff4500;
 }
 
@@ -1452,38 +1498,25 @@ textarea {
   background-image: url(../img/pattern-6-2400.jpg);
   background-size: 1280px;
 }
-.map #map {
-  width: 100%;
+.map .inner {
+  overflow: visible;
+}
+.map .inner > .wrap {
+  position: relative;
+  height: calc(500px - 80px);
+}
+.map .inner > .wrap #map {
+  width: 100vw;
   height: 500px;
-  margin-bottom: 80px;
-}
-.map .inner .contacts .wrap {
-  text-align: center;
-}
-.map .inner .contacts .wrap::after {
-  display: block;
-  content: "";
-  clear: both;
-}
-.map .inner .contacts .wrap article {
-  width: 25%;
-  float: left;
-}
-.map .inner .contacts .wrap article span {
-  display: block;
-  font-size: 44px;
-  color: orangered;
-  margin-bottom: 30px;
-}
-.map .inner .contacts .wrap article .txt > h2 {
-  font: 400 24px/1 "biorhyme";
-  margin-bottom: 12px;
-}
-.map .inner .contacts .wrap article .txt > p {
-  font: 300 16px/1.6 "biorhyme";
+  margin-top: -80px;
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  transform: translate(-50%);
 }
 .map .inner .branch {
   width: 100%;
+  margin-top: 80px;
 }
 .map .inner .branch::after {
   display: block;
@@ -1517,6 +1550,31 @@ textarea {
 .map .inner .branch article .wrap address {
   font: 400 15px/1 "biorhyme";
   margin-bottom: 15px;
+}
+.map .inner .contacts .wrap {
+  text-align: center;
+}
+.map .inner .contacts .wrap::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+.map .inner .contacts .wrap article {
+  width: 25%;
+  float: left;
+}
+.map .inner .contacts .wrap article span {
+  display: block;
+  font-size: 44px;
+  color: orangered;
+  margin-bottom: 30px;
+}
+.map .inner .contacts .wrap article .txt > h2 {
+  font: 400 24px/1 "biorhyme";
+  margin-bottom: 12px;
+}
+.map .inner .contacts .wrap article .txt > p {
+  font: 300 16px/1.6 "biorhyme";
 }
 .map .inner .directions article {
   width: 100%;

@@ -2,13 +2,14 @@
 
 .members {
 
+
     .sub_visual {
         background-image: url(../img/pattern-10-2400.jpg);
     }
 
     h2 {
         font: 300 44px/1 'biorhyme';
-        margin-bottom: 100px;
+        margin-bottom: 80px;
     }
 
     .important {
@@ -21,9 +22,9 @@
     }
 
     .wrap {
-        margin-bottom: 50px;
-        
-        &:last-of-type { margin-bottom: 150px; }
+        width: 100%;
+        margin-bottom: 80px;
+        @include floatClear;
     }
 
     #terms {
@@ -42,33 +43,69 @@
         margin-right: 8px;
     }
     input[type=text], [type=password], [type=tel] {
-        border-bottom: 1px solid orangered;
-        font: 400 14px/1 'noto sans kr';
-        height: 35px; width: 50%;
-        padding: 0 10px;
+        border-bottom: 1px solid #ccc;
+        font: 500 14px/1 'noto sans kr';
+        width: 100%;
+        padding: 15px 10px;
         transition: border 0.5s;
-        margin-right: 10px;
 
         &::placeholder {
-            color: #000;
-            font-weight: 200;
+            color: #aaa;
+            font-weight: 400;
+        }
+
+        &:focus {
+            border-color: orangered;
         }
     }
-    input#year { width: 25%; }
+
+    input#year { width: calc((100% - 38px) / 3); }
+    input#email { 
+        width: calc(100% - 50px - ((100% - 36px) / 3)); margin-right: 15px; 
+    }
+    input#phoneNum { width: calc(100% - 19px - ((100% - 36px) / 3)); }
+
     select {
-        width: 25%; height: 35px;
+        width: calc((100% - 36px) / 3); 
+        height: 40px;
         padding: 0 10px;
         border: none;
-        border: 1px solid orangered;
+        border: 1px solid #ccc;
+        transition: border 0.5s;
+
+        &:focus {
+            border-color: orangered;
+        }
 
         &#month, &#day, &#address { margin-left: 15px }
         &#telecom { margin-right: 15px; }
     }
 
+    .btn {
+        width: fit-content;
+        float: right;
+
+        input#submit, input#reset {
+            font: 300 44px/1 'biorhyme';
+            text-decoration: overline;
+            overflow: visible;
+            cursor: pointer;
+            margin-left: 80px;
+
+            &:hover {
+                color: orangered;
+            }
+        }
+
+    }
+    
     table {
+        float: right;
         width: 66.66%;
+        margin-bottom: 80px;
+
         tr {
-            height: 70px;
+            height: 80px;
         }
         th {
             width: 33.33%;
@@ -78,10 +115,17 @@
         td {
             text-align: left;
             font: 400 14px/1 'noto sans kr';
+            position: relative;
 
             a {
                 font: 400 14px/1 'noto sans kr';
                 color: orangered;
+                position: absolute;
+                bottom: 35px; right: 0px;
+
+                &:focus, &:hover {
+                    text-decoration: overline;
+                }
             }
         }
     }
