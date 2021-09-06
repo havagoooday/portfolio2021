@@ -7,6 +7,25 @@
         background-image: url(../img/pattern-13-2400.jpg);
         background-size: 1300px;
     }
+
+    //h1 이 bg3 뒤에 깔리는 건 어떻게 해결할 수 있을까?
+
+    .bg3 {
+        position: absolute;
+        top: 1800px; right: -400px;
+        width: 500px; height: 500px;
+        background-color: gold;
+        background-size: 1600px;
+        background-position: center;
+        border-radius: 50%;
+        transition: all 2s;
+        transform-origin: center;
+
+        &:hover {
+            transform: scale(1000%);
+            background-color: rgba(255, 217, 0, 0);
+        }
+    }
     
     .wrap {
         width: 100%;
@@ -16,7 +35,8 @@
         .bg1 {
             position: absolute;
             top: 0px; left: 0px;
-            width: 350px; height: 350px;
+            width: calc(1180px * 0.28);
+            height: calc(1180px * 0.28);
             background-image: url(../img/pattern-11-2400.jpg);
             background-size: 1200px;
             background-position: center;
@@ -26,7 +46,8 @@
         .bg2 {
             position: absolute;
             top: 50px; left: -50px;
-            width: 350px; height: 350px;
+            width: calc(1180px * 0.28);
+            height: calc(1180px * 0.28);
             border-radius: 50%;
             border: 1px solid gold;
             background-size: 1200px;
@@ -35,30 +56,15 @@
 
             &:hover {
                 background-color: gold;
+                transform: scale(1.1);
                 top: 0px; left: 0px;
                 // java 로 article 에 hover 하면 변경되도록 변경
             }
         }
 
-        .bg3 {
-            position: absolute;
-            top: 600px; right: -600px;
-            width: 500px; height: 500px;
-            background-color: gold;
-            background-size: 1600px;
-            background-position: center;
-            border-radius: 50%;
-            transition: all 1.5s;
-            transform-origin: center;
-
-            &:hover {
-                transform: scale(1000%);
-            }
-        }
-
         article {
             width: 66.66%;
-            margin-bottom: 300px;
+            margin-bottom: 200px;
             position: relative;
             z-index: 1;
 
@@ -178,24 +184,21 @@
                     height: 300px;
                     background-color: gold;
                     background-size: 300%;
-                    margin-bottom: 30px;
+                    margin-bottom: 50px;
 
                 }
 
                 .txt {
                     width: 66.66%;
-                    transform: translate(150px, -200px);
-                    background-color: orangered;
-                    padding: 15px 30px 15px;
+                    float: right;
                     transition: all 1s;
+                    margin-bottom: 100px;
 
                     &:hover {
-                        transform: translate(150px, -20px);
-                        background: none;
-                        h2, h3, p {color: orangered;}
+                        transform: translate(-10px, -8px);
                     }
 
-                    h2, h3, p {color: white;}
+                    h2, h3, p {color: orangered;}
 
                     h2 {
                         font: 300 44px/1.2 'biorhyme expanded';
